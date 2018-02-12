@@ -14,7 +14,7 @@ public class DetecShapeColor {
         System.out.println("Welcome to OpenCV " + Core.VERSION);
 
         //读入图片F:\ideawork\ShapeColorDetector\imgs\sc.png
-        Mat image = Imgcodecs.imread("F:\\ideawork\\ShapeColorDetector\\imgs\\sc.png");
+        Mat image = Imgcodecs.imread("F:\\ideawork\\ShapeColorDetector\\imgs\\scsc.png");
         //缩放之后的图片
         Mat imageResized = image.clone();
         float width=image.width();
@@ -78,13 +78,20 @@ public class DetecShapeColor {
                     shapeResult.put("circle",shapeResult.get("circle")+1);
                     break;
             }
+            /**
+             * 颜色检测
+             */
+            ColorDector colorDector = new ColorDector();
+            colorDector.detect(labImg,contours,i);
         }
+
         Set set = shapeResult.entrySet();
         Map.Entry[] entries = (Map.Entry[])set.toArray(new Map.Entry[set.size()]);
         for (int i=0;i<entries.length;i++){
             System.out.println("形状:"+entries[i].getKey().toString()+"---数量:"+entries[i].getValue().toString());
 
         }
+
     }
 
 }
