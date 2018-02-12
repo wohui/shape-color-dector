@@ -9,5 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="opencv_340" level="project" />
     <orderEntry type="library" name="commons-math3-3.6.1" level="project" />
+    <orderEntry type="library" name="opencv-340" level="project" />
+    <orderEntry type="library" name="commons-math3-3.3" level="project" />
   </component>
 </module>
