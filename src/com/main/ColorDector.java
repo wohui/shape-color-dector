@@ -39,10 +39,6 @@ public class ColorDector {
          *  [[224  42 211]]
          *  [[ 82 207  20]]]
          *  目前还没有调试完成
-        Mat mat = Mat.eye( 3, 3, CvType.CV_64FC3 );
-        mat = mat.mul(mat, 255);
-        Imgproc.cvtColor(mat,lab,Imgproc.COLOR_RGB2Lab);
-        System.out.println( "lab = " + lab.dump() );
         */
 
         Mat mask = Mat.zeros(height,width, CvType.CV_8UC1);   //声明全零矩阵
